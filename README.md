@@ -1,1 +1,2 @@
-# leetcode-exercise
+# leetcode.com
+exercise from https://leetcode.com/
