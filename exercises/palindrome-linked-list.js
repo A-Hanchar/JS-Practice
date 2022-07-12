@@ -12,20 +12,20 @@
  */
 const isPalindrome = head => {
   const headAsArray = []
-  
+
   while (head !== null) {
     headAsArray.push(head.val)
-    
+
     head = head.next
   }
-  
+
   const headAsArrayLength = headAsArray.length
 
-  if(headAsArrayLength === 0) {
+  if (headAsArrayLength === 0) {
     return false
   }
 
-  if(headAsArrayLength === 1) {
+  if (headAsArrayLength === 1) {
     return true
   }
 
@@ -33,17 +33,16 @@ const isPalindrome = head => {
   let end = headAsArrayLength - 1
 
   do {
-    if(headAsArray[start] !== headAsArray[end]) {
+    if (headAsArray[start] !== headAsArray[end]) {
       return false
     }
 
     start++
     end--
-  } while (start < end);
+  } while (start < end)
 
   return true
 }
 
-
-console.log(isPalindrome([1,2,2,1]));
-console.log(isPalindrome([1,2]));
+console.log(isPalindrome([1, 2, 2, 1]))
+console.log(isPalindrome([1, 2]))

@@ -18,7 +18,7 @@ const threeSum = nums => {
   }
 
   nums.sort((a, b) => a - b)
-  
+
   const maxNum = nums.at(-1)
 
   if (maxNum < 0) {
