@@ -5,6 +5,14 @@
  *     this.next = (next===undefined ? null : next)
  * }
  */
+
+class ListNode {
+  constructor(val, next) {
+    this.val = val === undefined ? 0 : val
+    this.next = next === undefined ? null : next
+  }
+}
+
 /**
  * @see https://leetcode.com/problems/palindrome-linked-list/
  * @param {ListNode} head
