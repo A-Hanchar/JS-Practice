@@ -1,14 +1,5 @@
-# Ignore dist, .out folder for git
-dist
-.cache
-.out
-
-.DS_Store
-dist
-.out
-
 #vscode
 .vscode
 
 #new.js
-.new.js
+./new.js
