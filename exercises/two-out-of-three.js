@@ -1,4 +1,5 @@
 /**
+ * @see https://leetcode.com/problems/two-out-of-three
  * @param {number[]} nums1
  * @param {number[]} nums2
  * @param {number[]} nums3
@@ -12,13 +13,13 @@ const twoOutOfThree = (nums1, nums2, nums3) => {
   const result = new Set()
 
   uniqNums1.forEach(number => {
-    if(uniqNums2.includes(number) || uniqNums3.includes(number)) {
+    if (uniqNums2.includes(number) || uniqNums3.includes(number)) {
       result.add(number)
     }
   })
 
   uniqNums2.forEach(number => {
-    if(uniqNums3.includes(number)) {
+    if (uniqNums3.includes(number)) {
       result.add(number)
     }
   })
