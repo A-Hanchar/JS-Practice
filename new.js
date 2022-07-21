@@ -1,36 +1,23 @@
 /**
- * @see https://leetcode.com/problems/relative-sort-array/
- * @param {number[]} arr1
- * @param {number[]} arr2
- * @return {number[]}
+ * @param {string} s
+ * @param {string} goal
+ * @return {boolean}
  */
-const relativeSortArray = (arr1, arr2) => {
-  const numbersCount = {}
+const buddyStrings = (s, goal) => {
+  for(let i = 0; i < s.length - 1; i++) {    
+    for(let j = 1; j < s.length; j++) {
+      const firstLetter = s[i]
+      const secondLetter = s[j]
 
-  arr1.forEach(number => {
-    let count = numbersCount[number] ?? 0
-
-    numbersCount[number] = ++count
-  })
-
-  const result = []
-
-  const addNumbersToResult = (tailLength, value) => {
-    const arrTail = Array(tailLength).fill(Number(value))
-    result.push(...arrTail)
+      let chekStr = s
+      chekStr[i] = secondLetter
+      chekStr[j] = firstLetter
+      console.log(chekStr, s);
+    }
   }
 
-  arr2.forEach(number => {
-    addNumbersToResult(numbersCount[number], number)
-    delete numbersCount[number]
-  })
-
-  for (const [number, count] of Object.entries(numbersCount)) {
-    addNumbersToResult(count, number)
-  }
-
-  return result
+  return false
 }
 
-console.log(relativeSortArray([2, 3, 1, 3, 2, 4, 6, 7, 9, 2, 19], [2, 1, 4, 3, 9, 6]))
-console.log(relativeSortArray([28, 6, 22, 8, 44, 17], [22, 28, 8, 6]))
+console.log(buddyStrings('ab', 'ba'))
+console.log(buddyStrings('abcd', 'cbad'))
