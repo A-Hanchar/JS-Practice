@@ -1,5 +1,5 @@
 /**
- * @see
+ * @see https://leetcode.com/problems/latest-time-by-replacing-hidden-digits
  * @param {string} time
  * @return {string}
  */
@@ -29,7 +29,7 @@ const maximumTime = time => {
     }
   }
 
-  if(hh1 === two && ![zero, one, two, three].includes(hh2)) {
+  if (hh1 === two && ![zero, one, two, three].includes(hh2)) {
     hh1 = one
   }
 
