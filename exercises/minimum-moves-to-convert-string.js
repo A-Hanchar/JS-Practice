@@ -1,5 +1,5 @@
 /**
- * @see
+ * @see https://leetcode.com/problems/minimum-moves-to-convert-string/
  * @param {string} s
  * @return {number}
  */
@@ -8,10 +8,10 @@ const minimumMoves = s => {
 
   let idx = 0
 
-  while(idx < s.length) {
+  while (idx < s.length) {
     const firstLetter = s[idx] ?? ''
 
-    if(firstLetter === 'O') {
+    if (firstLetter === 'O') {
       idx++
       continue
     }
@@ -21,20 +21,10 @@ const minimumMoves = s => {
 
     const checkStr = firstLetter + secondLetter + thirdLetter
 
-    if(checkStr.includes('X')) steps++
+    if (checkStr.includes('X')) steps++
 
     idx += 3
   }
-  
-  // for (let i = 0; i < s.length; i += 3) {
-  //   const firstLetter = s[i] ?? ''
-  //   const secondLetter = s[i + 1] ?? ''
-  //   const thirdLetter = s[i + 2] ?? ''
-
-  //   const checkStr = firstLetter + secondLetter + thirdLetter
-
-  //   if(checkStr.includes('X')) steps++
-  // }
 
   return steps
 }
