@@ -12,21 +12,21 @@ const containsNearbyDuplicate = (nums, k) => {
       const idxs = map.get(nums[i])
 
       map.set(nums[i], [...idxs, i])
-      
+
       continue
     }
 
     map.set(nums[i], [i])
   }
 
-  for(const idxs of map.values()) {
-    if(idxs.length === 1) {
+  for (const idxs of map.values()) {
+    if (idxs.length === 1) {
       continue
     }
 
-    for(let i = 0; i < idxs.length - 1; i++) {
-      for(let j = i + 1; j < idxs.length; j++) {
-        if(idxs[j] - idxs[i] <= k) {
+    for (let i = 0; i < idxs.length - 1; i++) {
+      for (let j = i + 1; j < idxs.length; j++) {
+        if (idxs[j] - idxs[i] <= k) {
           return true
         }
       }
