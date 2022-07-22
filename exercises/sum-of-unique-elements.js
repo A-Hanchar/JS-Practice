@@ -1,5 +1,5 @@
 /**
- * @see
+ * @see https://leetcode.com/problems/sum-of-unique-elements
  * @param {number[]} nums
  * @return {number}
  */
@@ -12,13 +12,12 @@ const sumOfUnique = nums => {
     countOfNums[num] = count + 1
   })
 
+  let sum = 0
 
-  let sum = 0;
-
-  for(const [key, value] of Object.entries(countOfNums)) {
-    if(value === 1) sum += Number(key)
+  for (const [key, value] of Object.entries(countOfNums)) {
+    if (value === 1) sum += Number(key)
   }
-  
+
   return sum
 }
 
