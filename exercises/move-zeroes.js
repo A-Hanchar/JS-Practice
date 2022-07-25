@@ -15,15 +15,13 @@ const moveZeroes = nums => {
 
     if (nums[i] !== 0 && lastZeroIndex !== -1) {
       const tmp = nums[i]
-      
+
       nums[i] = nums[lastZeroIndex]
       nums[lastZeroIndex] = tmp
 
       lastZeroIndex++
     }
   }
-
-  return nums
 }
 
 console.log(moveZeroes([0, 1, 0, 3, 12]))
