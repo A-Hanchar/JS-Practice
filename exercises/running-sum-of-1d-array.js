@@ -4,6 +4,12 @@
  * @return {number[]}
  */
 const runningSum = nums => {
+  // for (let i = 1; i < nums.length; i++) {
+  //   nums[i] = nums[i] + nums[i-1]
+  // }
+
+  // return nums
+
   let sum = nums[0]
 
   const result = [sum]
